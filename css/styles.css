@@ -1,0 +1,267 @@
+body{
+    margin: 0;
+
+    position: relative;
+
+    height: 100vh;
+
+    background-image: url("https://ilovevg.it/wp-content/uploads/2020/12/CP_Red_City-1024x576.jpg");
+    background-size: cover;
+
+    font-family: 'Nova Slim', cursive;
+}
+
+.filter{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.main-menu{
+    position: fixed;
+    left: calc(50% - 205px);
+    top: 80px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 410px;
+    height: 474px;
+
+    border-radius: 14px;
+    background-color: rgba(0, 0, 0, 0.76);
+    border: 2px solid #D06060;
+
+}
+
+.text-menu{
+    margin: 0;
+    margin-bottom: 50px;
+    
+    color: white;
+
+    font-size: 20px;
+}
+
+.text-box{
+    display: block;
+
+    margin-bottom: 60px;
+
+    width: 293px;
+    height: 45px;
+
+    border-radius: 100px;
+    border: 0;
+
+    font-family: 'Nova Slim', cursive;
+    font-size: 20px;
+    text-indent: 20px;
+
+    background-color: rgb(208, 96, 96, 0.7);
+}
+
+.accept{
+    position: relative;
+
+    width: 131px;
+    height: 45px;
+
+    border-radius: 100px;
+    background-color: black;
+    color: white;
+
+    font-family: 'Nova Slim', cursive;
+    font-size: 20px;
+
+    border: 0;
+
+    border: 1px solid white;
+
+    overflow: hidden;
+}
+
+.accept-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    width: 100%;
+
+    margin: 0;
+    
+}
+
+.accept::after{
+    position: absolute;
+    top: -99px;
+    left: -150px;
+
+    content: "";
+    width: 45px;
+    height: 150px;
+
+    border-top: 45px solid transparent;
+    border-right: 45px solid white;
+
+    transform: rotate(90deg);
+}
+
+.image{
+    position: fixed;
+    top: -1000px;
+    left: calc(50% - 22vw);
+
+    width: 45vw;
+    height: auto;
+    
+    border-radius: 51px;
+}
+
+.return{
+    position: fixed;
+    top: -1000px;
+    left: calc(50% - 65px);
+
+    width: 131px;
+    height: 78px;
+    
+ 
+    background-color: transparent;
+    border: 2px solid #D06060;
+
+    border-radius: 22px;
+
+
+}
+
+.return::after{
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 30px);
+
+    content: "";
+    width: 0;
+    height: 0;
+
+    border-bottom: 30px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+
+}
+
+@keyframes main-menu-up {
+    0%{
+        top: 80px;
+    }
+
+    100%{
+        top: -1000px;
+    }
+}
+
+@keyframes main-menu-down {
+    0%{
+        top: -1000px;
+    }
+
+    100%{
+        top: 80px;
+    }
+}
+
+@keyframes image-down {
+    0%{
+        top: -1000px
+    }
+    100%{
+        top: 150px;
+    }
+}
+
+@keyframes image-up {
+    0%{
+        top: 150px
+    }
+    100%{
+        top: -1000px;
+    }
+}
+
+@keyframes return-down {
+    0%{
+        top: -1000px;
+    }
+
+    100%{
+        top: 10px;
+    }
+}
+
+@keyframes return-up {
+    0%{
+        top: 10px;
+    }
+
+    100%{
+        top: -1000px;
+    }
+}
+
+@keyframes filter-darker {
+    0%{
+        background-color: rgba(0, 0, 0, 0.45);
+    }
+    100%{
+        background-color: rgba(0, 0, 0, 0.94);
+    }
+}
+
+@keyframes filter-darker-reverse {
+    0%{
+        background-color: rgba(0, 0, 0, 0.94);
+    }
+    100%{
+        background-color: rgba(0, 0, 0, 0.45);
+    }
+}
+
+
+@keyframes accept-animation {
+    0%{
+        left: -150px;
+    }
+
+    100%{
+        left: 40px;
+    }
+}
+
+@keyframes change-color {
+    0%{
+        color: white;
+    }
+    100%{
+        color: black;
+    }
+}
+
+@media (hover: hover){
+    .accept:hover::after{
+        animation: accept-animation 0.3s forwards;
+    }
+    .accept-text:hover{
+        animation: change-color 0.3s forwards;
+    }
+
+}
